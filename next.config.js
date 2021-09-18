@@ -3,4 +3,7 @@ module.exports = {
   images: {
     domains: ["images.unsplash.com"],
   },
+  images1: {
+    domains: ["images.pixabay.com"],
+  },
 };
