@@ -1,6 +1,13 @@
 import next from "next";
 import styles from "./about.module.css";
-import { Grid, Item, Paper, Typography } from "@mui/material";
+import {
+  Grid,
+  Item,
+  Paper,
+  Typography,
+  Button,
+  TextField,
+} from "@mui/material";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Banner2Img from "../public/home/banner/2.jpg";
@@ -14,20 +21,46 @@ function about() {
         <Grid item xs={6} md={4}>
           <Typography
             variant="h1"
-            component="h5"
+            component="h6"
             style={{
               position: "absolute",
               left: "20%",
-              top: "20%",
-              zindex: "999999999",
+              top: "30%",
+              zIndex: "999",
             }}
           >
             Lorem
           </Typography>
-          <Typography variant="h1" component="h6" className="typo-ipsum">
+          <Typography
+            variant="h1"
+            component="h6"
+            style={{
+              position: "absolute",
+              left: "20%",
+              top: "40%",
+              zIndex: "999",
+              color: "red",
+            }}
+          >
             Ipsum
           </Typography>
+          <TextField
+            id="filled-search"
+            label="Search field"
+            type="search"
+            variant="filled"
+            aria-label="Search through site content"
+            style={{ top: "75%", left: "50%" }}
+          />
+          <Button
+            variant="contained"
+            color="secondary"
+            style={{ marginTop: "5%", top: "75%", left: "50%", zIndex: "999" }}
+          >
+            Discover
+          </Button>
         </Grid>
+
         <Grid item xs={6} md={4}>
           <Image
             src={Banner2Img}
@@ -40,10 +73,13 @@ function about() {
           />
         </Grid>
         <Grid item xs={6} md={4}>
-          <Typography variant="p" component="p">
+          <Typography variant="p" component="p" style={{ paddingTop: "35%" }}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
           </Typography>
+          <Button variant="contained" style={{ marginTop: "5%" }}>
+            View Detail
+          </Button>
         </Grid>
       </Grid>
     </div>
