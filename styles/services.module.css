@@ -1,0 +1,14 @@
+.serviceHead {
+  text-decoration-color: rgb(255, 255, 255) !important;
+  text-decoration: underline;
+}
+.serviceFirst {
+  background-color: #091020;
+  color: white;
+}
+.textJustify {
+  text-align: justify;
+}
+.serviceIcon {
+  font-size: 30px;
+}

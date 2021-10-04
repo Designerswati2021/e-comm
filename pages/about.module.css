@@ -2,3 +2,15 @@
   color: red;
   font-size: 50px;
 }
+.banner {
+  background-image: linear-gradient(rgb(115 41 75 / 66%), rgb(12 12 12 / 72%)),
+    url(https://images.unsplash.com/photo-1463171379579-3fdfb86d6285?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80);
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.backColor {
+  color: red;
+}

@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+.projectHeading {
+  color: white;
+}
+.img {
+  opacity: 0.5;
+  object-fit: cover;
+  transition: transform 2s;
+}
+.img:hover {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.1);
+}
+.textBottom {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  z-index: 99999;
+  font-size: 30px;
+  display: block;
+  width: 100%;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.textBottomsec {
+  position: absolute;
+  top: 60%;
+  text-align: center;
+  z-index: 99999;
+  font-size: 30px;
+  display: block;
+  width: 100%;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.fullProject:hover {
+  background: linear-gradient(to bottom, red 0%, rgb(0, 0, 0) 100%);
+  transition: 0.3s;
+}

@@ -1,7 +1,18 @@
 import Link from "next/link";
-import { AppBar, Button, Grid, Toolbar, Typography } from "@mui/material";
+import { styled } from "@mui/system";
+import {
+  AppBar,
+  Button,
+  Grid,
+  Toolbar,
+  Typography,
+  IconButton,
+} from "@mui/material";
 import { FiLogIn } from "react-icons/fi";
 import { makeStyles } from "@mui/styles";
+import { RiFacebookCircleFill } from "react-icons/ri";
+import { useState } from "react";
+// import { Styles } from "./about.module.css;";
 
 const useStyles = makeStyles({
   flex: {
@@ -9,8 +20,16 @@ const useStyles = makeStyles({
   },
 });
 
+const StyledTypography = styled(Typography)`
+  color: ${(props) => (props.active ? "#9e8a26" : "white")};
+`;
 const Navbar = () => {
   const custom = useStyles();
+  const [isActive, setIsActive] = useState("home");
+
+  const linkActive = (data) => {
+    setIsActive(data);
+  };
 
   return (
     <nav>
@@ -18,25 +37,53 @@ const Navbar = () => {
         <Toolbar>
           <Grid container spacing={1}>
             <Grid item xs={3}>
-              <Typography variant="h5" sx={{ flexGrow: 1 }}>
+              <StyledTypography variant="h5" sx={{ flexGrow: 1 }}>
                 LOGO
-              </Typography>
+              </StyledTypography>
             </Grid>
             <Grid item xs={4} className={custom.flex}>
               <Link href="/">
-                <Typography variant="h5" component="a">
+                <StyledTypography
+                  onClick={() => linkActive("home")}
+                  variant="h6"
+                  component="a"
+                  active={isActive === "home"}
+                >
                   Home
-                </Typography>
+                </StyledTypography>
               </Link>
-              <Link href="/about">
-                <Typography variant="h5" ml={3} component="a">
-                  About Us
-                </Typography>
+              <Link href="/">
+                <StyledTypography
+                  onClick={() => linkActive("about")}
+                  variant="h6"
+                  ml={3}
+                  component="a"
+                  active={isActive === "about"}
+                >
+                  About
+                </StyledTypography>
               </Link>
-              <Link href="/new">
-                <Typography variant="h5" ml={3} component="a">
-                  new
-                </Typography>
+              <Link href="/">
+                <StyledTypography
+                  onClick={() => linkActive("services")}
+                  variant="h6"
+                  ml={3}
+                  component="a"
+                  active={isActive === "services"}
+                >
+                  Services
+                </StyledTypography>
+              </Link>
+              <Link href="/">
+                <StyledTypography
+                  onClick={() => linkActive("contact")}
+                  variant="h6"
+                  ml={3}
+                  component="a"
+                  active={isActive === "contact"}
+                >
+                  Contact
+                </StyledTypography>
               </Link>
             </Grid>
             <Grid
@@ -47,10 +94,10 @@ const Navbar = () => {
               justifyContent="flex-end"
               alignItems="center"
             >
-              <Button color="secondary" variant="contained">
-                Login &nbsp;
-                <FiLogIn />
-              </Button>
+              {/* <svg data-testid="FacebookIcon"></svg> */}
+              <IconButton color="success" aria-label="Example" size="medium">
+                <RiFacebookCircleFill />
+              </IconButton>
             </Grid>
           </Grid>
         </Toolbar>

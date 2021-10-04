@@ -1,0 +1,29 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.item {
+  text-align: center;
+}
+.footer {
+  background-color: #091020;
+  margin-top: 30px;
+  padding: 20px;
+  font-size: 25px;
+  color: white;
+  opacity: 0.8;
+}
+.icon {
+  border: 1px solid rgb(165, 130, 130);
+  border-radius: 20px;
+  padding: 5px;
+  font-size: 40px;
+  margin-left: 3px;
+}
+.icon:hover {
+  background-color: rgb(230, 54, 113);
+}
+.heart {
+  color: red;
+}
